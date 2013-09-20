@@ -1,0 +1,14 @@
+{
+  "name": "mc-scripts",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Minecraft scripts, mark2 included",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "shelljs": "~0.2.5",
+    "fn.js": "~0.2.6"
+  },
+  "author": "Eli Perelman",
+  "license": "MIT"
+}
