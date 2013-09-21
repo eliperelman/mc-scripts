@@ -1,14 +1,14 @@
-var util = require('util');
-var path = require('path');
-var fn = require('fn.js');
-var shell = require('shelljs');
 var mark2 = require('../mark2');
 
 module.exports = function (grunt) {
 
     grunt.registerMultiTask('filter-sync', 'Sync PwnFilter rules on all named servers', function () {
+        var from = this.data.from;
+
         fn.each(function (dest) {
-            grunt.file.copy(this.data.from + '/plugins/PwnFilter/rules.txt', dest + '/plugins/PwnFilter/rules.txt');
+            var rules = '/plugins/PwnFilter/rules.txt';
+
+            grunt.file.copy(from + rules, dest + rules);
         }, this.data.to);
     });
 
