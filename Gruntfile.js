@@ -31,7 +31,7 @@ module.exports = function (grunt) {
 
     grunt.loadTasks('./tasks');
 
-    grunt.registerTask('reload-filters', 'filter-sync:main filter-reload:all');
+    grunt.registerTask('reload-filters', ['filter-sync:main', 'filter-reload:all']);
 
     grunt.file.setBase('../');
 
