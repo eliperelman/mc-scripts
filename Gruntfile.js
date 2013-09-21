@@ -1,5 +1,3 @@
-var fn = require('fn.js');
-
 module.exports = function (grunt) {
 
     grunt.initConfig({

@@ -2,7 +2,7 @@ var util = require('util');
 var path = require('path');
 var fn = require('fn.js');
 var shell = require('shelljs');
-var mark2 = require('mark2');
+var mark2 = require('../mark2');
 
 module.exports = function (grunt) {
 
