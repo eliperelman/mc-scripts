@@ -33,6 +33,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('reload-filters', 'filter-sync:main filter-reload:all');
 
-    grunt.path.setBase('../');
+    grunt.file.setBase('../');
 
 };
