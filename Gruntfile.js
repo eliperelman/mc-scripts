@@ -3,24 +3,24 @@ module.exports = function (grunt) {
     grunt.initConfig({
         reload: {
             all: [
-                '../nexusquest',
-                '../games',
-                '../pvp',
-                '../skyrim',
-                '../creative',
-                '../survival'
+                'nexusquest',
+                'games',
+                'pvp',
+                'skyrim',
+                'creative',
+                'survival'
             ]
         },
         'filter-sync': {
             main: {
-                from: '../nexusquest',
+                from: './nexusquest',
                 to: [
-                    '../__BASE__',
-                    '../games',
-                    '../pvp',
-                    '../skyrim',
-                    '../creative',
-                    '../survival'
+                    './__BASE__',
+                    './games',
+                    './pvp',
+                    './skyrim',
+                    './creative',
+                    './survival'
                 ]
             }
         },
@@ -32,5 +32,7 @@ module.exports = function (grunt) {
     grunt.loadTasks('./tasks');
 
     grunt.registerTask('reload-filters', 'filter-sync:main filter-reload:all');
+
+    grunt.path.setBase('../');
 
 };
