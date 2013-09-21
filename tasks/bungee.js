@@ -3,7 +3,7 @@ var shell = require('shelljs');
 module.exports = function (grunt) {
 
     grunt.registerTask('bungee-start', function () {
-        shell.cd('../bungee');
+        shell.cd('bungee');
         shell.exec('tmux new-session -d -n bungee java -Xss192k -Xms256M -Xmx1G -jar BungeeCord.jar');
     });
 
